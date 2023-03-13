@@ -1,0 +1,22 @@
+{
+  "Worcester": [
+    {
+      "date": "03/11/2023",
+      "meals": {
+        "breakfast": [
+          {
+            "category": "breakfast",
+            "recipes": [
+              {
+                "name": "Avocado Toast Bar (Bacon)",
+                "nutrition_labels": []
+              }
+            ]
+          }
+        ],
+        "lunch": [],
+        "dinner": []
+      }
+    }
+  ]
+}
