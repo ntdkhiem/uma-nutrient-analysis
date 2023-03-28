@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 
 def add_html(fn, content):
     with open(f"html_content/{fn}.html", "wb+") as f:
+        print(f"Downloading {fn}...")
         f.write(content)
 
 

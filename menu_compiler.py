@@ -83,4 +83,5 @@ if __name__ == "__main__":
 
     # Dumping to json
     with open("database.json", "w+") as f:
+        print("Dumping to database.json")
         json.dump(final_result, f, ensure_ascii=False)
