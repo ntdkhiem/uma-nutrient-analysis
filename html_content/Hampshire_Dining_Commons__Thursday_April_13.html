@@ -1,0 +1,337 @@
+
+
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+   <!-- fieldfilt.aspx, Version 2.6.0  -->
+<!-- End of Aurora Information Systems Required Text -->
+
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+   <!-- nauserdata.aspx, Version 2.6  -->
+<!-- End of Aurora Information Systems Required Text --> 
+
+<html>
+<head>
+<title>This Week's Menus</title>
+<link rel="stylesheet" href="foodpro_web_ina.css" type="text/css">
+</head>
+<SCRIPT LANGUAGE=JAVASCRIPT>
+
+var popImg = null
+var popDiag = null
+var curHeight = null
+var curWidth = null
+var popTop = null
+var popLeft = null
+
+function openPopImg(picName,windowWidth,windowHeight) {
+  closePopImg();
+  curHeight=screen.availHeight;
+  curWidth=screen.availWidth;
+  popTop = 75;
+  popLeft = eval(curWidth - windowWidth - 25);
+  popImg=window.open(picName, '_new', "toolbar=no,scrollbars=no,resizable=yes,top=" + popTop + ",left=" + popLeft + ",width=" + (parseInt(windowWidth)+0) + ",height=" + (parseInt(windowHeight)+0));
+}
+function closePopImg(){
+  if(navigator.appName != "Microsoft Internet Explorer" || parseInt(navigator.appVersion) >= 4) if(popImg != null) if(!popImg.closed) popImg.close()
+}
+function setStatus(msg){
+  status = msg;
+  return true;
+}
+
+var newWindowOptions = null
+var newWindowTop = null
+var newWindowLeft = null
+
+function openDescWin(descText, dispName) {  
+  if(descText=="")
+  {     
+     closeDescWin()
+  }
+  else
+  {
+     closeDescWin();
+     newWindowTop = screen.height - (screen.height * 0.75) - 80;
+     newWindowLeft = screen.width - 310;
+     newWindowOptions = "toolbar=no,width=300,height=125,top=" + newWindowTop + ",left=" + newWindowLeft + ",alwaysRaised=yes";     
+     popDiag=window.open("", "Recipe_Desc", newWindowOptions);
+     descText = descText.replace("~","'");
+     dispName = dispName.replace("~","'"); 
+     popDiag.document.write("<html><head><title>" + dispName + "</title><link rel='stylesheet' href='foodpro_web_ina.css' type='text/css'></head><body><div class='shortmenuproddesc'>" + descText + "</div></body></html>");
+  }
+}
+function closeDescWin(){   
+   if(navigator.appName != "Microsoft Internet Explorer" || parseInt(navigator.appVersion) >= 4) if(popDiag != null) if(!popDiag.closed) popDiag.close();
+}
+</SCRIPT>
+
+<body class="shortmenubody" onUnload="closePopImg();">
+  <table width="100%" border="0" cellpadding="0" cellspacing="10">
+    <tr>
+      <td colspan="2" class="headbody"><center>
+  <table class="headcontainer">
+    <tr>
+      <td align="right" width=20% rowspan="2">
+          <img src="logo.jpg" height="83" width="220" alt="Logo">
+      </td>
+      <td align="center" valign="top">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td>
+              <div class="headsysname">`</div>
+              <div class="headtitle">This Week's Menus</div>
+              <div class="headlocation">Hampshire Dining Commons</div><br>
+            </td>
+
+            <td align="center" valign="top">
+              <form action="search.aspx" method="post">
+                <input type="hidden" name="Action" value="SEARCH">
+                <input type="hidden" name="strCurSearchLocs" value="03[*]Hampshire Dining Commons">
+                <input type="hidden" name="strCurSearchDays" value="4/13/2023">
+                <div class="searchtext">Find Your Favorite Food...<div>
+                <div class="searchtext"><input type="text" name="strCurKeywords" value=""><input type="submit" value="Search"></div>
+                <div class="searchlink"><a href="search.aspx">[Advanced Search]</a></div>
+              </form>
+            </td>
+
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><div align="right">
+
+	<SCRIPT>
+	  function clearFilters() {
+             var curMenuhref = location.href;
+	     document.cookie = "SavedAllergens=;Path=/;"
+             document.cookie = "SavedWebCodes=;Path=/;"
+             document.cookie = "SavedIngredients=;Path=/;"
+	     document.location.href="?action=clearfilters&sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2F13%2F2023";        
+             parent.frames[2].location.href = curMenuhref;
+	}
+	</SCRIPT>
+
+<a href='#' onClick='javascript:window.open("allergenfilter.aspx?strcurlocationnum=03","AllergenFilter","width=650,height=450,location=no,status=no,toolbar=yes,scrollbars=yes,resizable=yes")'><span class='allergenfilterinclinks'>Set Filters</span></a>
+
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+   <!-- allergenfilterinc.aspx, Version 2.9  -->
+<!-- End of Aurora Information Systems Required Text -->  </div></td>
+    </tr>          
+  </table>
+</center>
+
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+   <!-- head.aspx, Version 2.6  -->
+<!-- End of Aurora Information Systems Required Text -->
+        
+       
+
+
+
+
+          
+     
+        </td>
+    </tr>
+    <tr>
+      <td width="16%" valign="top" class="datebody">
+  <table border="0"  align="center" width=95% cellspacing="0" cellpadding="0">
+    <tr>
+      <td><div class="dateselectheader">Select a date:</div></td>
+    </tr> 
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=3%2f27%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Monday, March 27</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=3%2f28%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Tuesday, March 28</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=3%2f29%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Wednesday, March 29</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=3%2f30%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Thursday, March 30</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=3%2f31%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Friday, March 31</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f1%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Saturday, April 1</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f2%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Sunday, April 2</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f3%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Monday, April 3</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f4%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Tuesday, April 4</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f5%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Wednesday, April 5</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f6%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Thursday, April 6</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f7%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Friday, April 7</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f8%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Saturday, April 8</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f9%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Sunday, April 9</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f10%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Monday, April 10</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f11%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Tuesday, April 11</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f12%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Wednesday, April 12</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f13%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Thursday, April 13</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f14%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Friday, April 14</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f15%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Saturday, April 15</a></span>
+
+      </td>    
+    </tr>
+    
+    <tr>
+      <td align="left">
+        <span class='datechevrons'>&raquo;&nbsp;</span><span class='dateselections'><a href="shortmenu.aspx?sName=%60&locationNum=03&locationName=Hampshire+Dining+Commons&naFlag=1&WeeksMenus=This+Week%27s+Menus&myaction=read&dtdate=4%2f16%2f2023" onMouseOver="window.status = 'Select a date.'; return true;" onMouseOut="window.status= ' ';">Sunday, April 16</a></span>
+
+      </td>    
+    </tr>
+    
+  </table>
+  
+      <br>
+      <table class="datelegendcontainer">
+        <tr><td><div class="datelegendheader">Legend</div></td></tr>
+        <tr><td align="left"><span class='datelegendicons'><span style='color: #000000'><img src=LegendImages/icon-veg.jpg alt='' width='16' height='16'>=Vegetarian</span></span></td></tr><tr><td align="left"><span class='datelegendicons'><span style='color: #000000'><img src=LegendImages/icon-loc.jpg alt='' width='16' height='16'>=Local </span></span></td></tr><tr><td align="left"><span class='datelegendicons'><span style='color: #000000'><img src=LegendImages/icon-sus.jpg alt='' width='16' height='16'>=Sustainability</span></span></td></tr><tr><td align="left"><span class='datelegendicons'><span style='color: #000000'><img src=LegendImages/icon-whlgrn.jpg alt='' width='16' height='16'>=Whole Grain</span></span></td></tr><tr><td align="left"><span class='datelegendicons'><span style='color: #000000'><img src=LegendImages/icon-hal.jpg alt='' width='16' height='16'>=Halal</span></span></td></tr><tr><td align="left"><span class='datelegendicons'><span style='color: #000000'><img src=LegendImages/icon-antibfr.jpg alt='' width='16' height='16'>=Antibiotic Free</span></span></td></tr><tr><td align="left"><span class='datelegendicons'><span style='color: #000000'><img src=LegendImages/icon-vegan.jpg alt='' width='16' height='16'>=Vegan</span></span></td></tr><tr><td align="left"><span class='datelegendicons'><span style='color: #000000'><img src=LegendImages/cra.png alt='' width='16' height='16'>=Carbon Rating A</span></span></td></tr><tr><td align="left"><span class='datelegendicons'><span style='color: #000000'><img src=LegendImages/crb.png alt='' width='16' height='16'>=Carbon Rating B</span></span></td></tr><tr><td align="left"><span class='datelegendicons'><span style='color: #000000'><img src=LegendImages/crc.png alt='' width='16' height='16'>=Carbon Rating C</span></span></td></tr><tr><td align="left"><span class='datelegendicons'><span style='color: #000000'><img src=LegendImages/crd.png alt='' width='16' height='16'>=Carbon Rating D</span></span></td></tr><tr><td align="left"><span class='datelegendicons'><span style='color: #000000'><img src=LegendImages/cre.png alt='' width='16' height='16'>=Carbon Rating E</span></span></td></tr>
+      </table>
+      
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+   <!-- date.aspx, Version 2.6  -->
+<!-- End of Aurora Information Systems Required Text --> </td>
+      <td width="84%" valign="top">      
+        <div class="shortmenutitle">Menus for Thursday, April 13, 2023</div>          
+          
+            <br>
+            <table align="center" border="0" width=60%>
+              <tr>
+                <td><div class="shortmenuinstructs">No Data Available</div></td>
+              </tr>
+            </table>
+          
+        <!-- The following is required by Aurora Information Systems -- DO NOT MODIFY OR REMOVE -->
+          <br>
+          <div class="poweredbyfoodpro">Powered by FoodPro<SUP>&#174;</SUP></div>
+        <!-- End of Aurora Information Systems Required Text -->
+          <form>
+          <table align="center" border="0" width=80%>
+            <tr>
+              <td align="center">
+                <input type="button" value="Return to Location Selection" onClick="top.location.href='location.aspx';" style="WIDTH: 175px" width="175px"> 
+              </td>
+              
+                <td align="left">
+                  <input type="button" value="Back to Dining Services" onClick="top.location.href='http://www.umass.edu/diningservices';" style="WIDTH: 175px" width="175px">
+                </td>
+              
+            </tr>
+          </table>
+          </form>          
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+   <!-- shortmenu.aspx, Version 2.6.0  -->
+<!-- End of Aurora Information Systems Required Text --> 
