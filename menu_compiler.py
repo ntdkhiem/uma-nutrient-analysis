@@ -1,6 +1,7 @@
 import os
 import string
 import json
+from datetime import datetime
 
 from bs4 import BeautifulSoup
 
@@ -39,9 +40,6 @@ def get_recipes(meal):
                         "name": format_string(
                             element.find("div", class_="shortmenurecipes").text
                         ),
-                        "nutrition_labels": [el.get("src") for el in element.find_all("img")],
-                        # "nutrition_facts": {},
-                        # "portion": {"quantity": 0, "unit": ""},  # unit: oz, whole
                     }
                 )
     return result
@@ -54,8 +52,12 @@ def parse_name(file_name):
     date = file_name[file_name.find("__") + 2 :]
     # print(name, date)
     _, month, day = date.split("_")
-    date = f"{3 if month == 'March' else 4 if month == 'April' else 5}/{day}/2023"
-    return name, date
+
+    date = datetime.strptime(f"{month}_{day}", "%B_%d")
+    # parsed date is set to 1900, so switch it to current year
+    date = date.replace(year=datetime.now().year)
+    # Remove zero-padding from month and day using '#' for windows and '-' for linux
+    return name, date.strftime("%#m/%#d/%Y")
 
 
 if __name__ == "__main__":
@@ -68,7 +70,6 @@ if __name__ == "__main__":
         if name not in final_result:
             final_result[name] = []
 
-        # refer to sample.json
         result = {"date": date, "meals": {}}
 
         soup = BeautifulSoup(open(f"html_content/{file}", "rb"), "html.parser")
@@ -84,4 +85,4 @@ if __name__ == "__main__":
     # Dumping to json
     with open("database.json", "w+") as f:
         print("Dumping to database.json")
-        json.dump(final_result, f, ensure_ascii=False)
+        json.dump(final_result, f, indent=4, ensure_ascii=False)
